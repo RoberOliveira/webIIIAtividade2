@@ -1,0 +1,21 @@
+<form action="/tasks/edit" method="post">
+    <input type="hidden" name="id" value="${task.id}">
+
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" value="${task.titulo}" required>
+    
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required>${task.descricao}</textarea>
+    
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" value="${task.date}" required>
+    
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+        <option value="EM_ANDAMENTO" ${task.status == 'EM_ANDAMENTO' ? 'selected' : ''}>Em Andamento</option>
+        <option value="CONCLUIDO" ${task.status == 'CONCLUIDO' ? 'selected' : ''}>Concluído</option>
+        <option value="CANCELADO" ${task.status == 'CANCELADO' ? 'selected' : ''}>Cancelado</option>
+    </select>
+
+    <button type="submit">Salvar Alterações</button>
+</form>

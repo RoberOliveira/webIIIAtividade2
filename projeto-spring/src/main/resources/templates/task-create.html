@@ -1,0 +1,19 @@
+<form action="/tasks/create" method="post">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" required>
+    
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required></textarea>
+    
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+    
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+        <option value="EM_ANDAMENTO">Em Andamento</option>
+        <option value="CONCLUIDO">Concluído</option>
+        <option value="CANCELADO">Cancelado</option>
+    </select>
+
+    <button type="submit">Criar Tarefa</button>
+</form>
